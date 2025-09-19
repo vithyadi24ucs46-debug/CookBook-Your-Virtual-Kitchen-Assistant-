@@ -1,0 +1,651 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Symbol;}{\f2\fnil\fcharset1 Segoe UI Symbol;}{\f3\fnil Calibri;}{\f4\fnil\fcharset1 Segoe UI Emoji;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 `\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab `\f1\u-10179?\u-9000?\f0  Cookbook Virtual Kitchen Assistant \par
+\par
+1. Introduction:\par
+               Project Title: Cookbook Virtual Kitchen Assistant\par
+              Team members:\par
+                               Fronted Developer-Srisathya R\par
+                               UI/UX Designer-Vithya D, Poornima T\par
+                               React Developer- Uma A.R\par
+                                Project Manager-Priya V\par
+\par
+2.  Project Overview:\par
+                        Purpose:\par
+                                         The Virtual Kitchen Assistant is an interactive web application designed to help users discover, manage, and cook recipes efficiently. It includes features like voice assistance, personalized recipe recommendations, and smart pantry management.\par
+                                 Features:\par
+                                                        Recipe Search And Filtering\par
+                                                        Step-By-Step Cooking Instuction\par
+                                                        Virtual Pantry With Ingredient Tracking \par
+                                                        Meal Planning And Scheduling\par
+                                                        Voice Command Support For Hands-Free Cooking\par
+3.Architecture:\par
+                              Component Structure:\par
+                                                          App: Root Component\par
+                                                        Navbar: Navigation And Links\par
+                                                        RecipeList: Displays a list of recipe cards\par
+                                                        RecipeDetail: Detailed view of a selected recipe\par
+                                                        Pantry: Shows Available ingredients\par
+                                                        Planner: Meal planning interface\par
+                                                        Voice Assistant:Voice Command Interface\par
+\par
+State Management:\par
+                                                  Using Context API for global state (e.g., user session, pantry items) and useState for local component states.\par
+                                        Routing: \par
+                                                  Handled with React Router v6,routes include:                                                                                                                                                                                               \par
+                                                   /:Home\par
+                                                   /recipes:All recipes\par
+                                                   /recipes/:id:Single recipe detail\par
+                                                   /pantry :pantry manager\par
+                                                   /planner:meal planner                                                                                                                                                                                                                                                                       \par
+4. Setup Instructions:\par
+                                                       Prerequisites:\par
+                                                                                    Node.jsv16+\par
+                                                                                     Npm or yarn\par
+                                                                                     git\par
+Installation:\par
+                             1. Clone the repo:\par
+                                 git clone {{\field{\*\fldinst{HYPERLINK https://github.com/yourusername/cookbook-virtual-kitchen.git }}{\fldrslt{https://github.com/yourusername/cookbook-virtual-kitchen.git\ul0\cf0}}}}\f0\fs22\par
+                              2. Navigate to client directory:\par
+                                  cd cookbook-virtual-kitchen/client\par
+                               3. Install dependencies:\par
+                                npm install\par
+                                4. Create .env file for environment variables:\par
+                                REACT_APP_API_URL=https://api.yourbackend.com\par
+                                5. Folder Structure\par
+                                 cookbook-app/\par
+                                   \f2\u9500?\u9472?\u9472?\f0  public/\par
+                                   \f2\u9500?\u9472?\u9472?\f0  src/\par
+                                                \f2\u9500?\u9472?\u9472?\f0  components/\par
+                                                \f2\u9500?\u9472?\u9472?\f0  RecipeCard.js\par
+                                                \f2\u9500?\u9472?\u9472?\f0  SearchBar.js\par
+                                                 \f2\u9474?\f0    \f2\u9492?\u9472?\u9472?\f0  Favorites.js\par
+                                                \f2\u9500?\u9472?\u9472?\f0  pages/\par
+                                                \f2\u9500?\u9472?\u9472?\f0  Home.js\par
+                                                \f2\u9500?\u9472?\u9472?\f0  Search.js\par
+                                                \f2\u9474?\f0    \f2\u9492?\u9472?\u9472?\f0  Profile.js\par
+                                                \f2\u9500?\u9472?\u9472?\f0  state/\par
+                                                \f2\u9474?\f0    \f2\u9492?\u9472?\u9472?\f0  context.js\par
+                                                \f2\u9492?\u9472?\u9472?\f0  main.css\par
+                                                \f2\u9474?\f0    \f2\u9500?\u9472?\u9472?\f0  utils/\par
+                                                \f2\u9474?\f0    \f2\u9492?\u9472?\u9472?\f0  api.js\par
+                                                \f2\u9474?\f0    \f2\u9492?\u9472?\u9472?\f0  App.js\par
+                                   \f2\u9500?\u9472?\u9472?\f0  package.json\par
+                                                \f2\u9492?\u9472?\u9472?\f0  README.md\par
+                              Utilities:\par
+                                                 hooks/useVoiceCommands.js: Handles voice input\par
+                                                 utils/api.js: API service wrapper\par
+                                                 helpers/formatTime.js: Helper for time formatting\par
+6. Running the Application:\par
+                                                                     Frontend:\par
+                                                                       cd client:\par
+                                                                       npm start\par
+                                                                       This starts the app on {{\field{\*\fldinst{HYPERLINK http://localhost:3000 }}{\fldrslt{http://localhost:3000\ul0\cf0}}}}\f0\fs22 .\par
+7. Component Documentation:\par
+                                                        Key Components:\par
+                                                        RecipeCard:\par
+                                                                      Displays summary info (props: title, image, prepTime)\par
+                                                       VoiceAssistant:\par
+                                                                      Manages voice input (props: none, uses context)\par
+                                                       Reusable Components:\par
+                                                       Button:\par
+                                                                      Custom styled button (props: label, onClick, variant)\par
+                                                        Modal:\par
+                                                                       Pantry items:\par
+                                                                                                Here's a classic Chicken Biryani recipe that balances rich flavor, aroma, and spice. You can adapt it for mutton, beef, or vegetables as well.\par
+\f1\u-10180?\u-8361?\f0  Chicken Biryani Recipe\par
+\f1\u-10179?\u-8878?\f0  Prep Time: 30 mins\par
+\f1\u-10179?\u-8878?\f0  Cook Time: 45 mins\par
+\f1\u-10180?\u-8323?\f0  Serves: 4\f3\endash 5\par
+\par
+\f4\u-10178?\u-8766?\f0  Ingredients\par
+  For Marination:\par
+500g chicken (bone-in, cut into medium pieces)\par
+1 cup yogurt\par
+1 tbsp ginger-garlic paste\par
+1 tsp red chili powder\par
+\'bd tsp turmeric powder\par
+1 tsp garam masala\par
+Salt to taste\par
+Juice of \'bd lemon\par
+Fresh chopped coriander & mint leaves (a handful each)\par
+\par
+For Rice:\par
+2 cups basmati rice (soaked 30 mins)\par
+1 bay leaf\par
+4\f3\endash 5 cloves\par
+2\endash 3 cardamom pods\par
+1-inch cinnamon stick\par
+Salt to taste\par
+\par
+For Biryani:\par
+2 large onions (thinly sliced)\par
+2 tomatoes (chopped)\par
+1 tsp cumin seeds\par
+2 green chilies (slit)\par
+1 tsp biryani masala (optional)\par
+\f0\'bc cup oil or ghee\par
+Saffron strands soaked in 2 tbsp warm milk (or use a pinch of food color)\par
+Fried onions (for garnish)\par
+Mint and coriander leaves\par
+\par
+\f1\u-10179?\u-8918?\f0  Instructions:\par
+\par
+1. Marinate the Chicken:\par
+Mix all marination ingredients in a bowl.\par
+Add chicken and coat well.\par
+Cover and marinate for at least 1 hour (overnight is best).\par
+\par
+2. Cook the Rice:\par
+Boil water in a large pot.\par
+Add whole spices and salt.\par
+Add soaked rice and cook until 70% cooked (grains should still be firm).\par
+Drain and set aside.\par
+\par
+3. Prepare the Biryani Masala:\par
+Heat oil/ghee in a deep pan.\par
+Fry onions until golden brown. Remove half for garnish.\par
+In the same pan, add cumin seeds, green chilies, and chopped tomatoes.\par
+Cook until tomatoes are soft.\par
+Add marinated chicken. Cook covered on medium heat for 10\f3\endash 15 mins until the chicken is cooked and oil separates.\par
+\par
+4. Layer the Biryani:\par
+Lower the heat.\par
+Layer half of the partially cooked rice over the chicken.\par
+Sprinkle some mint, coriander, fried onions, and saffron milk.\par
+Repeat with remaining rice and toppings.\par
+\par
+5. Dum (Steam) Cooking:\par
+Cover tightly with a lid or seal with dough.\par
+Cook on low heat for 20\endash 25 minutes.\par
+Alternatively, place a heavy object on the lid and cook on a griddle (tawa) to prevent burning.\par
+\par
+\f1\u-10180?\u-8323?\f0  Serve:\par
+Gently mix before serving.\par
+Serve hot with raita, salad, or boiled eggs.\par
+8. State Management:\par
+                                          Global State:\par
+                                         Context API Handle:\par
+                                         Auth state:\par
+                                         Pantry items:\par
+                                         Current voice command:\par
+                                         Local State:\par
+                                         Handled via useState for form inputs, search filters, modal visibility\par
+9. User Interface:\par
+                                         Screenshots (replace with your actual images or include links): \par
+                                         Home page with top recipes\par
+                                         Detailed recipe view\par
+                                         Pantry management interface\par
+                                         Meal planner calendar\par
+                                       Voice command interface\par
+                                       (Add screenshots or GIFs here)\par
+10. Styling:\par
+                                       CSS Frameworks/Libraries:\par
+                                       TailwindCSS for utility-first styling\par
+                                       Emotion for component-level styles\par
+               Theming: \par
+                                       Supports light and dark themes\par
+                                        Custom themes settings stored in theme.js\par
+\par
+11. Testing\par
+\par
+Testing Strategy:\par
+                                          Unit tests: Jest + React Testing Library\par
+Integration:  \par
+                           Testing interactions like adding a recipe to planner\par
+\par
+End-to-End:\par
+                              Cypress (planned for future)\par
+\par
+\par
+Code Coverage:\par
+Jest configured with coverage reporting:\par
+npm test -- --coverage\par
+12. Screenshots or Demo:\par
+                                                             \f1\u-10179?\u-8937?\f0  Live Demohttps://virtualkitchenassistant.vercel.app\par
+Screenshots:\par
+Home Page\par
+Recipe Detail:\par
+Pantry Management:\par
+Meal Planner:\par
+(Insert images or link to external demo/gallery)\par
+13. Known Issues:\par
+Voice commands may not be fully accurate in noisy environments\par
+Limited browser support for speech recognition (only Chrome fully supported)\par
+Pantry items not syncing in real-time\par
+ 14. Future Enhancements:\par
+    AI-based recipe suggestions based on pantry contents\par
+    Integration w\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+---\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+State Management:\par
+Using Context API for global state (e.g., user session, pantry items) and useState for local component states.\par
+\par
+Routing:\par
+Handled with React Router v6, routes include:\par
+\par
+/: Home\par
+\par
+/recipes: All recipes\par
+\par
+/recipes/:id: Single recipe detail\par
+\par
+/pantry: Pantry manager\par
+\par
+/planner: Meal planner\par
+\par
+\par
+\par
+\par
+---\par
+\par
+4. Setup Instructions\par
+\par
+Prerequisites:\par
+\par
+Node.js v16+\par
+\par
+npm or yarn\par
+\par
+Git\par
+\par
+\par
+Installation:\par
+\par
+1. Clone the repo:\par
+\par
+git clone {{\field{\*\fldinst{HYPERLINK https://github.com/yourusername/cookbook-virtual-kitchen.git }}{\fldrslt{https://github.com/yourusername/cookbook-virtual-kitchen.git\ul0\cf0}}}}\f0\fs22\par
+\par
+\par
+2. Navigate to client directory:\par
+\par
+cd cookbook-virtual-kitchen/client\par
+\par
+\par
+3. Install dependencies:\par
+\par
+npm install\par
+\par
+\par
+4. Create .env file for environment variables:\par
+\par
+REACT_APP_API_URL=https://api.yourbackend.com\par
+\par
+\par
+\par
+\par
+\par
+---\par
+\par
+5. Folder Structure\par
+\par
+\f1\u-10179?\u-9023?\f0  client/\par
+\par
+\f2\u9500?\u9472?\u9472?\f0  assets/          # Images, icons, etc.\par
+\f2\u9500?\u9472?\u9472?\f0  components/      # Reusable UI components\par
+\f2\u9500?\u9472?\u9472?\f0  pages/           # Page-level components\par
+\f2\u9500?\u9472?\u9472?\f0  hooks/           # Custom React hooks\par
+\f2\u9500?\u9472?\u9472?\f0  context/         # Global state providers\par
+\f2\u9500?\u9472?\u9472?\f0  styles/          # Global styles and themes\par
+\f2\u9500?\u9472?\u9472?\f0  App.js\par
+\f2\u9500?\u9472?\u9472?\f0  index.js\par
+\par
+Utilities:\par
+\par
+hooks/useVoiceCommands.js: Handles voice input\par
+\par
+utils/api.js: API service wrapper\par
+\par
+helpers/formatTime.js: Helper for time formatting\par
+\par
+\par
+\par
+\par
+---\par
+\par
+6. Running the Application\par
+\par
+Frontend:\par
+\par
+cd client\par
+npm start\par
+\par
+\par
+This starts the app on {{\field{\*\fldinst{HYPERLINK http://localhost:3000 }}{\fldrslt{http://localhost:3000\ul0\cf0}}}}\f0\fs22 .\par
+\par
+\par
+---\par
+\par
+7. Component Documentation\par
+\par
+Key Components:\par
+\par
+RecipeCard: Displays summary info (props: title, image, prepTime)\par
+\par
+VoiceAssistant: Manages voice input (props: none, uses context)\par
+\par
+\par
+Reusable Components:\par
+\par
+Button: Custom styled button (props: label, onClick, variant)\par
+\par
+Modal: Popup for recipe steps or pantry items\par
+\par
+\par
+\par
+\par
+---\par
+\par
+8. State Management\par
+\par
+Global State:\par
+\par
+Context API handles:\par
+\par
+Auth state\par
+\par
+Pantry items\par
+\par
+Current voice command\par
+\par
+\par
+\par
+Local State:\par
+\par
+Handled via useState for form inputs, search filters, modal visibility\par
+\par
+\par
+\par
+\par
+---\par
+\par
+9. User Interface\par
+\par
+Screenshots (replace with your actual images or include links):\par
+\par
+Home page with top recipes\par
+\par
+Detailed recipe view\par
+\par
+Pantry management interface\par
+\par
+Meal planner calendar\par
+\par
+Voice command interface\par
+\par
+\par
+(Add screenshots or GIFs here)\par
+\par
+\par
+---\par
+\par
+10. Styling\par
+\par
+CSS Frameworks/Libraries:\par
+\par
+TailwindCSS for utility-first styling\par
+\par
+Emotion for component-level styles\par
+\par
+\par
+Theming:\par
+\par
+Supports light and dark themes\par
+\par
+Custom theme settings stored in theme.js\par
+\par
+\par
+\par
+\par
+---\par
+\par
+11. Testing\par
+\par
+Testing Strategy:\par
+\par
+Unit tests: Jest + React Testing Library\par
+\par
+Integration: Testing interactions like adding a recipe to planner\par
+\par
+End-to-End: Cypress (planned for future)\par
+\par
+\par
+Code Coverage:\par
+\par
+Jest configured with coverage reporting:\par
+\par
+npm test -- --coverage\par
+\par
+\par
+\par
+\par
+---\par
+\par
+12. Screenshots or Demo\par
+\par
+\f1\u-10179?\u-8937?\f0  Live Demo: {{\field{\*\fldinst{HYPERLINK https://virtualkitchenassistant.vercel.app }}{\fldrslt{https://virtualkitchenassistant.vercel.app\ul0\cf0}}}}\f0\fs22\par
+\par
+Screenshots:\par
+\par
+Home Page\par
+\par
+Recipe Detail\par
+\par
+Pantry Management\par
+\par
+Meal Planner\par
+\par
+\par
+\par
+(Insert images or link to external demo/gallery)\par
+\par
+\par
+---\par
+\par
+13. Known Issues\par
+\par
+Voice commands may not be fully accurate in noisy environments\par
+\par
+Limited browser support for speech recognition (only Chrome fully supported)\par
+\par
+Pantry items not syncing in real-time\par
+\par
+\par
+\par
+---\par
+\par
+14. Future Enhancements\par
+\par
+AI-based recipe suggestions based on pantry contents\par
+\par
+Integration w\par
+}
+ 
